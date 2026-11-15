@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PayGuardian · Business Workflow Map</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f9fc;color:#0f172a;font-family:Segoe UI,Arial,sans-serif}
+.hero{padding:28px max(20px,6vw) 24px;background:linear-gradient(125deg,#111827,#312e81);color:#fff}
+.eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:#7c3aed}.hero .eyebrow{color:#c4b5fd}
+.hero h1{margin:5px 0 7px;font-size:32px;line-height:1.15;letter-spacing:-.02em}.hero p{max-width:840px;margin:0;color:#e0e7ff;font-size:14px;line-height:1.45}.hero-meta{margin-top:12px;font-size:12px;color:#cbd5e1}
+.wrap{max-width:1180px;margin:20px auto;padding:0 20px 50px}.workflow-group{margin:18px 0 24px;padding:18px;background:#eef2ff;border:1px solid #dbe3f5;border-radius:22px}.group-header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:2px 4px 14px}.group-header h2{margin:4px 0 0;font-size:25px;line-height:1.2}.group-count{flex:0 0 auto;padding:7px 11px;background:#fff;border:1px solid #d8def0;border-radius:999px;color:#475569;font-size:12px;font-weight:750}
+.workflow-card{display:flex;gap:18px;margin:10px 0;padding:21px;background:#fff;border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 7px 20px rgba(15,23,42,.05)}
+.workflow-number{flex:0 0 44px;font-size:27px;font-weight:850;color:#c4b5fd}.workflow-content{flex:1;min-width:0}.workflow-title{margin:5px 0 13px;font-size:22px;line-height:1.25;color:#0f172a}h3{margin:0 0 6px;font-size:13px;color:#475569}p,li{color:#334155;line-height:1.52}
+.workflow-summary{padding:13px 15px;margin-bottom:13px;background:#f5f3ff;border-left:4px solid #7c3aed;border-radius:9px}.workflow-summary p{margin:0;font-size:15px}
+.context-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}.context-panel{padding:13px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:11px}.context-panel p{margin:0;font-size:13px}
+.value-section{margin-top:15px;padding-top:13px;border-top:1px solid #e2e8f0}.value-section ul{margin:6px 0 0;padding-left:21px}.value-section li{margin:4px 0;font-size:13px}
+.supporting-code{margin-top:15px;padding-top:12px;border-top:1px solid #e2e8f0}summary{cursor:pointer;color:#475569;font-weight:700;font-size:13px}.evidence-list{margin-top:10px}.evidence-item{margin:9px 0;padding:10px;background:#0f172a;border-radius:10px;overflow:hidden}.code-location{margin-bottom:7px;color:#c4b5fd;font-size:11px;font-weight:700;word-break:break-all}pre{margin:0;overflow:auto;color:#e2e8f0;font:11px/1.45 Consolas,monospace;white-space:pre}.empty-state{padding:30px;background:#fff;border-radius:16px;text-align:center}
+@media(max-width:760px){.hero{padding:20px 15px 17px}.hero h1{font-size:25px}.wrap{margin-top:12px;padding:0 12px 35px}.workflow-group{padding:12px;margin:12px 0 18px;border-radius:16px}.group-header{display:block;padding:2px 2px 10px}.group-header h2{font-size:21px}.group-count{display:inline-block;margin-top:9px}.workflow-card{display:block;padding:16px;margin:9px 0}.workflow-number{font-size:20px;margin-bottom:3px}.workflow-title{font-size:19px}.context-grid{grid-template-columns:1fr}.workflow-summary{padding:11px 12px}pre{font-size:10px}}
+</style><style id="unvibecode-customer-report-style">
+.hero{
+  padding:14px max(16px,4vw) 12px !important;
+}
+.hero h1{
+  margin:3px 0 4px !important;
+  font-size:24px !important;
+  line-height:1.12 !important;
+}
+.hero p{
+  max-width:980px !important;
+  font-size:13px !important;
+  line-height:1.35 !important;
+}
+.hero-meta{
+  margin-top:6px !important;
+  font-size:11px !important;
+}
+.wrap{
+  margin-top:12px !important;
+}
+</style>
+<style id="unvibecode-shared-theme">
+:root{--paper:#f7f6f2;--ink:#171714;--muted:#575750;--line:#35352e;--soft:#e9e8e1}
+html{scroll-behavior:smooth}body{background:var(--paper)!important;color:var(--ink)!important;font-family:Arial,Helvetica,sans-serif!important}
+a{color:inherit}.uvc-brand-bar{padding:20px 32px;border-bottom:1px solid var(--line);background:var(--paper)}.uvc-brand{font-size:24px;font-weight:800;letter-spacing:-1px;text-decoration:none;color:var(--ink)}.uvc-brand span{font-weight:400}
+h1,h2,h3,p,li,dt,dd,.eyebrow,.repository,.code-location{color:var(--ink)!important}.eyebrow,.hero-meta,.uvc-meta{font-family:Consolas,monospace!important;color:var(--muted)!important}
+.workspace,.view-toolbar,.view-tabs,.guide-item,.quick-guide,.connected-guide,.connected-cue,.cue-node,.context-sizes span,.token-help,.context-panel,.empty-state,.summary,.flaw,.structural-review,.hotspot-card,.metric,.grid section,.review-status,.scope-note{background:var(--paper)!important;color:var(--ink)!important;border-color:var(--line)!important;border-radius:0!important;box-shadow:none!important}
+.view-tab{border-radius:0!important;color:var(--ink)!important;background:var(--paper)!important;border-color:var(--line)!important}.view-tab.active,.download-link,.context-download,.context-panel a,.uvc-next-button{background:var(--ink)!important;color:var(--paper)!important;border-radius:0!important;border-color:var(--line)!important}
+.connected-cue p,.context-sizes span,.token-help p,.view-toolbar p{color:var(--muted)!important}.cue-icon,.context-sizes span.recommended{background:var(--soft)!important;border-color:var(--line)!important;color:var(--ink)!important}.cue-icon svg{stroke:var(--ink)!important}
+pre,.hotspot-code{background:var(--soft)!important;color:var(--ink)!important;border-radius:0!important}pre code{color:inherit!important}.path-graph{border-radius:0!important}.uvc-meta{font-size:12px;line-height:1.6;margin-top:8px}.uvc-report-heading{padding:28px 32px;border-bottom:1px solid var(--line)}.uvc-report-heading h1{font-size:32px;margin:0 0 8px}.uvc-report-heading p{margin:0}
+.uvc-workflow-layout{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1600px;margin:auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}.uvc-area-nav{position:sticky;top:0;max-height:100vh;overflow:auto;align-self:start;padding:24px 20px;border-right:1px solid var(--line)}.uvc-area-nav a{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #d4d3ca;text-decoration:none;font-size:14px}.uvc-area-nav a:hover{background:var(--soft)}.uvc-area-nav span{font:12px Consolas,monospace;color:var(--muted)}
+.uvc-workflow-layout .wrap{max-width:none;margin:0!important;padding:0;min-width:0}.workflow-group{padding:30px!important;margin:0!important;border:0!important;border-bottom:1px solid var(--line)!important;background:var(--paper)!important;border-radius:0!important}.workflow-card{padding:26px 0!important;margin:0!important;border:0!important;border-top:1px solid #bbbbae!important;background:var(--paper)!important;box-shadow:none!important;border-radius:0!important}.workflow-number{font:16px Consolas,monospace!important;color:var(--muted)!important;flex-basis:auto!important}.workflow-title{font-size:23px!important}.group-header h2{font-size:30px}.group-count{border:1px solid var(--line)!important;border-radius:0!important;background:var(--paper)!important;color:var(--ink)!important}.workflow-summary{background:transparent!important;border-left:2px solid var(--ink)!important;border-radius:0!important}.context-panel{border-radius:0!important}.supporting-code{border:1px solid #b2b2a6;border-radius:0!important;padding:14px 16px}.evidence-item pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:460px;overflow:auto}.uvc-embedded .uvc-brand-bar,.uvc-embedded .uvc-report-heading{display:none}
+#shipready-context-download,#shipready-file-details,#shipready-context-size{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important}#shipready-context-download,#shipready-file-details{border:0!important;box-shadow:none!important}#shipready-download-button{background:var(--ink)!important;color:var(--paper)!important;border-radius:0!important}#mynetwork{background:var(--paper)!important}#unvibecode-review-continue{background:var(--paper)!important;border-color:var(--line)!important;border-radius:0!important;box-shadow:none!important}
+@media(max-width:850px){.uvc-workflow-layout{grid-template-columns:1fr}.uvc-area-nav{position:static;max-height:none;display:grid;grid-template-columns:1fr 1fr;gap:0 20px;border-right:0;border-bottom:1px solid var(--line)}.uvc-area-nav>p{grid-column:1/-1}.uvc-brand-bar,.uvc-report-heading{padding:20px}.workflow-group{padding:24px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Centered loading view, above iframe while its embedded report initializes. */
+#report-stage{position:relative}
+#uvc-report-loader{position:absolute;inset:0;z-index:50;display:grid;place-items:center;background:var(--paper);text-align:center;color:var(--ink)}
+#uvc-report-loader[hidden]{display:none!important}#uvc-report-loader strong{display:block;font-size:16px}#uvc-report-loader p{font-size:12px;color:var(--muted)!important}
+.uvc-loading-spinner{display:block;width:28px;height:28px;border:2px solid var(--soft);border-top-color:var(--ink);border-radius:50%;margin:0 auto 14px;animation:uvc-spin .9s linear infinite}
+@keyframes uvc-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.uvc-loading-spinner{animation:none}}
+/* Compact output workspace; workflow cards and their sidebar are unchanged. */
+.uvc-brand-bar{padding:10px 20px;display:flex;align-items:center;justify-content:space-between}.uvc-github{font-size:12px;text-decoration:none}.uvc-run-info{right:110px!important}.uvc-brand{font-size:21px}
+body:has(.workspace){height:100vh;display:flex;flex-direction:column;overflow:hidden}
+body:has(.workspace)>main{width:100%;max-width:1600px;flex:1;min-height:0;padding:0 12px 12px;display:flex;flex-direction:column}
+.uvc-run-info{position:absolute;top:12px;left:165px;right:20px;display:flex;align-items:center;gap:14px;font-size:13px;min-width:0}.uvc-run-info>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.uvc-status{font:10px Consolas,monospace;border:1px solid var(--line);padding:3px 6px}
+.workspace{position:relative;display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden;margin:0!important}.view-tabs{flex-shrink:0;padding-right:130px;flex-wrap:wrap}.view-toolbar{flex-shrink:0;min-height:0!important;padding:9px 14px!important}.view-toolbar h2{font-size:18px}.view-toolbar p{margin:3px 0!important}.report-stage{flex:1;min-height:0!important}#report-stage.connected-active:not([hidden]){display:block!important}#report-stage[hidden],#context-panel[hidden]{display:none!important}#report-frame{height:100%!important;min-height:0!important}.workspace>#context-panel{min-height:0!important;overflow:auto;flex:1}.review-status,.scope-note{flex-shrink:0}
+.uvc-help{position:absolute;right:10px;top:10px;z-index:20;font-size:12px}.uvc-help>summary{list-style:none;cursor:pointer;padding:5px;border:1px solid var(--line);background:var(--paper)}.uvc-help-panel{position:absolute;right:0;top:34px;width:min(580px,calc(100vw - 50px));max-height:65vh;overflow:auto;background:var(--paper);border:1px solid var(--line);padding:12px}.uvc-help-panel .guide-grid{display:grid;grid-template-columns:1fr!important}.uvc-help-panel .guide-item{border:0;border-bottom:1px solid #bbbbae;padding:10px}.uvc-help-panel .quick-guide{margin:0!important}.uvc-help summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+@media(max-width:600px){.uvc-run-info{left:145px;font-size:12px;gap:6px}.uvc-brand{font-size:19px}.view-tabs{padding-right:45px}.uvc-help>summary span{display:none}.view-tab{padding:8px!important;font-size:12px!important}}
+
+</style></head><body><div class="uvc-brand-bar"><a class="uvc-brand" href="https://financeflash.github.io/unvibecode/" target="_blank" rel="noopener">Unvibe<span>Code</span></a><a class="uvc-github" href="https://github.com/FinanceFlash/unvibecode" target="_blank" rel="noopener noreferrer">⭐ Star UnvibeCode</a></div>
+<header class="uvc-report-heading"><h1>Business Workflow Map</h1><p>Understand end-to-end business operations reconstructed from the code.</p><div class="uvc-meta">PayGuardian · 43 workflows · 27 areas</div></header>
+<div class="uvc-workflow-layout"><aside class="uvc-area-nav" aria-label="Workflow areas"><p class="eyebrow">Workflow areas</p><a href="#workflow-area-1">Browse recent chats<span>01</span></a><a href="#workflow-area-2">Inspect workflows<span>02</span></a><a href="#workflow-area-3">Execute workflows<span>01</span></a><a href="#workflow-area-4">Initiate workflows<span>01</span></a><a href="#workflow-area-5">Environment workflows<span>06</span></a><a href="#workflow-area-6">Paypal workflows<span>03</span></a><a href="#workflow-area-7">Review workflows<span>03</span></a><a href="#workflow-area-8">Render Markdown content and specialized embedded content in the web client<span>01</span></a><a href="#workflow-area-9">Delegated workflows<span>03</span></a><a href="#workflow-area-10">Submit workflows<span>03</span></a><a href="#workflow-area-11">Budget workflows<span>01</span></a><a href="#workflow-area-12">Specialist workflows<span>01</span></a><a href="#workflow-area-13">Delegated workflows<span>02</span></a><a href="#workflow-area-14">Agent workflows<span>01</span></a><a href="#workflow-area-15">Context workflows<span>01</span></a><a href="#workflow-area-16">Payguardian workflows<span>01</span></a><a href="#workflow-area-17">Streamed workflows<span>01</span></a><a href="#workflow-area-18">View workflows<span>01</span></a><a href="#workflow-area-19">Authority workflows<span>01</span></a><a href="#workflow-area-20">Sandbox Attack Simulator<span>01</span></a><a href="#workflow-area-21">Select workflows<span>01</span></a><a href="#workflow-area-22">Action workflows<span>01</span></a><a href="#workflow-area-23">Ledger workflows<span>02</span></a><a href="#workflow-area-24">Provider workflows<span>01</span></a><a href="#workflow-area-25">Session workflows<span>01</span></a><a href="#workflow-area-26">Request workflows<span>01</span></a><a href="#workflow-area-27">Optional workflows<span>01</span></a></aside><main class="wrap">
+        <section class="workflow-group" id="workflow-area-1">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 1</div><h2>Browse recent chats</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_1c69f3585f3a34db">
+              <div class="workflow-number">01</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 1</div>
+                <h3 class="workflow-title">Browse recent chats</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>The workspace user opens session history; the component reads cached conversations and fetches the current environment&#x27;s list from the API, displays results, and updates the local cache on a successful response.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>View or find a conversation in the current environment</p></section><section class="context-panel"><h3>What it produces</h3><p>CachedConversation / conversation</p></section><section class="context-panel"><h3>Who relies on it</h3><p>workspace user</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Returns recent conversation metadata for display and selection</li><li>Maintains a local cache intended to support quick and offline-ready history access</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>SessionHistoryPanel()</strong> <span class="implementation-location">apps/web/components/chat/session-history.tsx · lines 25–180</span></li><li class="implementation-item"><strong>getCachedConversations()</strong> <span class="implementation-location">apps/web/lib/chat-cache.ts · lines 100–127</span></li><li class="implementation-item"><strong>mapSessionDtoToItem()</strong> <span class="implementation-location">apps/web/lib/api/mappers/sessions.ts · lines 18–39</span></li><li class="implementation-item"><strong>getAuthHeaders()</strong> <span class="implementation-location">apps/web/lib/api/client.ts · lines 47–71</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-2">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 2</div><h2>Inspect workflows</h2></div>
+            <div class="group-count">2 workflows</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_7081f3c98eeb75ce">
+              <div class="workflow-number">02</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 2</div>
+                <h3 class="workflow-title">Inspect a payment/action trace and its authorization chain, lifecycle, and verification context.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>Given an environment and action/trace ID, the UI retrieves related trace, action, PayPal operation, and activity data, maps available records, and displays payment and authorization details.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Retrieve and understand the status and details of a selected trace.</p></section><section class="context-panel"><h3>What it produces</h3><p>PaymentTrace / action trace</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Presents transaction amount, recipient, rail, status, and authorization context to the UI consumer.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>PaymentTraceView()</strong> <span class="implementation-location">apps/web/components/traces/PaymentTraceView.tsx · lines 30–355</span></li><li class="implementation-item"><strong>usePaymentTrace()</strong> <span class="implementation-location">apps/web/lib/api/hooks/use-payment-trace.ts · lines 16–92</span></li><li class="implementation-item"><strong>mapBackendTraceToView()</strong> <span class="implementation-location">apps/web/lib/api/mappers/payment-trace.ts · lines 29–202</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_8990279cae98eb4a">
+              <div class="workflow-number">03</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 3</div>
+                <h3 class="workflow-title">Inspect conversation context and runtime prompt/token information</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>When the context window dialog is opened with both identifiers, the component requests conversation context, uses returned data when available, and displays context details; the user can copy the selected prompt/context text.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>View the system instructions and assembled operational context, optionally copying the displayed text</p></section><section class="context-panel"><h3>What it produces</h3><p>conversation context for a conversationId within an environmentId</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Dialog user; context service endpoint is the remote counterparty</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Makes the context and runtime metadata visible to the user</li><li>Allows displayed prompt/context text to be copied</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>ContextWindowDialog()</strong> <span class="implementation-location">apps/web/components/chat/context-window-dialog.tsx · lines 409–779</span></li><li class="implementation-item"><strong>handleCopy()</strong> <span class="implementation-location">apps/web/components/chat/context-window-dialog.tsx · lines 489–501</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-3">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 3</div><h2>Execute workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_f91a37437442521f">
+              <div class="workflow-number">04</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 4</div>
+                <h3 class="workflow-title">Execute and track PayGuardian agent tasks</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>AgentWorker executes a WorkerTask through PersonalLangGraphAgent and records completion or failure in the in-memory task store; optionally reports run state to Gateway.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Process an assigned task and return its result or failure status</p></section><section class="context-panel"><h3>What it produces</h3><p>WorkerTask and its idempotency key</p></section><section class="context-panel"><h3>Who relies on it</h3><p>PersonalLangGraphAgent; optionally Gateway run tracking</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Records task progress and outcome</li><li>Avoids repeating work for an already completed task with the same idempotency key</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>AgentWorker</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/worker.py · lines 161–316</span></li><li class="implementation-item"><strong>WorkerTask</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/worker.py · lines 31–65</span></li><li class="implementation-item"><strong>TaskStatus</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/worker.py · lines 24–28</span></li><li class="implementation-item"><strong>AgentWorker.execute_task()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/worker.py · lines 179–284</span></li><li class="implementation-item"><strong>InMemoryTaskStore.submit()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/worker.py · lines 76–84</span></li><li class="implementation-item"><strong>assert_safe_prompt_content()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/gateway_client.py · lines 21–24</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-4">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 4</div><h2>Initiate workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_4b3980b38daefc5d">
+              <div class="workflow-number">05</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 5</div>
+                <h3 class="workflow-title">Initiate a payment request under a subagent&#x27;s delegated mandate.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A subagent requests payment; PayGuardianMCPTools locates a task/child mandate, checks delegated budget and Gateway authority, may request human approval and create a USD PayPal order, then stores and returns a payment intent.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Subagent seeks payment for an action and recipient.</p></section><section class="context-panel"><h3>What it produces</h3><p>payment_intent and child mandate</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Subagent; human approver and recipient may be involved.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Records a payment intent and exposes its status and approval details.</li><li>May initiate an external PayPal Sandbox order; code does not itself establish that funds were captured.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>PayGuardianMCPTools.request_payment()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/mcp_tools.py · lines 681–995</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-5">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 5</div><h2>Environment workflows</h2></div>
+            <div class="group-count">6 workflows</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_44458efaa090fc44">
+              <div class="workflow-number">06</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 6</div>
+                <h3 class="workflow-title">Create an environment</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An authenticated user submits environment details; the API validates and creates a user-owned environment, appends an audit event, and returns the environment.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Set up an environment with purpose, currency, and budget limit</p></section><section class="context-panel"><h3>What it produces</h3><p>environment</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Authenticated user who owns the environment</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Environment becomes available for subsequent agent registration and management.</li><li>Creation is recorded as an audit event.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>requirePrincipal()</strong> <span class="implementation-location">apps/api/src/phase1-routes.ts · lines 12–31</span></li><li class="implementation-item"><strong>registerPhase1Routes()</strong> <span class="implementation-location">apps/api/src/phase1-routes.ts · lines 33–345</span></li><li class="implementation-item"><strong>append()</strong> <span class="implementation-location">apps/api/src/audit.ts · lines 43–65</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_aa589af98c2686c3">
+              <div class="workflow-number">07</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 7</div>
+                <h3 class="workflow-title">Emergency Environment Controls</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An operator uses Emergency Environment Controls to pause or resume an environment; the UI sends a gateway request and updates the workspace environment status.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Pause or resume environment operations</p></section><section class="context-panel"><h3>What it produces</h3><p>Environment</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Autonomous agents operating in the environment</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>UI reports that agent spending is halted while paused</li><li>Environment status is changed locally</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>EmergencyControls()</strong> <span class="implementation-location">apps/web/components/security/EmergencyControls.tsx · lines 34–258</span></li><li class="implementation-item"><strong>handlePause()</strong> <span class="implementation-location">apps/web/components/security/EmergencyControls.tsx · lines 67–84</span></li><li class="implementation-item"><strong>handleResume()</strong> <span class="implementation-location">apps/web/components/security/EmergencyControls.tsx · lines 86–103</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_0c1afdf4355f8d13">
+              <div class="workflow-number">08</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 8</div>
+                <h3 class="workflow-title">Create an environment and provision its root agent and mandate.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>The CreateEnvironmentWizard user confirms configuration and consent; the wizard requests creation of an environment, its root agent, and its root mandate, then adds the assembled environment to the workspace store.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Configure an environment with bounded spending authority and submit its provisioning.</p></section><section class="context-panel"><h3>What it produces</h3><p>Environment with a root Personal Agent and root Mandate.</p></section><section class="context-panel"><h3>Who relies on it</h3><p>The environment and its root agent; the human user&#x27;s identity is not established here.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Creates the environment and attaches configured budget, currency, expiry, delegation, and approval settings to a root mandate.</li><li>Makes the returned environment available in the workspace store.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>CreateEnvironmentWizard()</strong> <span class="implementation-location">apps/web/components/wizard/create-environment-wizard.tsx · lines 30–860</span></li><li class="implementation-item"><strong>handleAuthorizeAndCreate()</strong> <span class="implementation-location">apps/web/components/wizard/create-environment-wizard.tsx · lines 188–256</span></li><li class="implementation-item"><strong>handleNextStep()</strong> <span class="implementation-location">apps/web/components/wizard/create-environment-wizard.tsx · lines 155–186</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_4912c34ac2e9f933">
+              <div class="workflow-number">09</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 9</div>
+                <h3 class="workflow-title">Environment management</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>Environment deletion initiated from a confirmation control calls the environment API and removes the environment from workspace state when successful.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Delete an environment</p></section><section class="context-panel"><h3>What it produces</h3><p>Environment</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Deleted environment is removed from workspace state</li><li>UI redirects to onboarding if the deleted environment was the last one</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>handleConfirmDelete()</strong> <span class="implementation-location">apps/web/components/shell/environment-switcher.tsx · lines 70–91</span></li><li class="implementation-item"><strong>useEnvironments()</strong> <span class="implementation-location">apps/web/lib/api/hooks/use-environments.ts · lines 38–141</span></li><li class="implementation-item"><strong>EnvironmentSwitcher()</strong> <span class="implementation-location">apps/web/components/shell/environment-switcher.tsx · lines 43–341</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_b792537edf76b82e">
+              <div class="workflow-number">10</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 10</div>
+                <h3 class="workflow-title">Create and activate an environment task session</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>Workspace operator initiates a new task session for the current environment; the UI calls createSession and, after success, sets it active and clears chat messages.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Start a fresh task thread</p></section><section class="context-panel"><h3>What it produces</h3><p>task session</p></section><section class="context-panel"><h3>Who relies on it</h3><p>workspace operator; backend gateway</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Provides a new session for an autonomous task thread</li><li>Updates active-session UI state only after a confirmed server response</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>handleCreateNewSession()</strong> <span class="implementation-location">apps/web/components/workspace/sessions-memory.tsx · lines 85–117</span></li><li class="implementation-item"><strong>SessionsGrid()</strong> <span class="implementation-location">apps/web/components/workspace/sessions-memory.tsx · lines 48–286</span></li><li class="implementation-item"><strong>handleSelectSession()</strong> <span class="implementation-location">apps/web/components/workspace/sessions-memory.tsx · lines 77–83</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_250302c21a6bbda2">
+              <div class="workflow-number">11</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 11</div>
+                <h3 class="workflow-title">Configure an environment with a root agent and bounded mandate.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>The onboarding UI submits environment configuration, creates a root agent and root mandate, stores the mapped environment locally, and navigates to the dashboard.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Create and activate an environment for agent operations.</p></section><section class="context-panel"><h3>What it produces</h3><p>Environment, root Agent, root Mandate</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Provides a configured environment and root authority context for subsequent agent operations.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>handleCreateAndDeploy()</strong> <span class="implementation-location">apps/web/components/onboarding/first-time-environment-slide-flow.tsx · lines 191–257</span></li><li class="implementation-item"><strong>FirstTimeEnvironmentSlideFlow()</strong> <span class="implementation-location">apps/web/components/onboarding/first-time-environment-slide-flow.tsx · lines 67–854</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-6">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 6</div><h2>Paypal workflows</h2></div>
+            <div class="group-count">3 workflows</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_e5a93a320ee0fd4d">
+              <div class="workflow-number">12</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 12</div>
+                <h3 class="workflow-title">Process PayPal provider jobs and reconcile operation status</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>PollingWorker executes queued PayPal jobs through ProviderJobExecutor, calls PayPal to create or capture orders or retrieve status, then persists operation observations and settles reservations where applicable.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>What it produces</h3><p>PayPalAction and ProviderOperation, with associated Reservation</p></section><section class="context-panel"><h3>Who relies on it</h3><p>PayPal provider; reservation/account holder identity is not established as the executing actor</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Provider order and capture results are reflected in local operation state</li><li>Reservations can be captured or released based on observed operation status</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>createWorkerRuntime()</strong> <span class="implementation-location">apps/worker/src/index.ts · lines 14–35</span></li><li class="implementation-item"><strong>loadWorkerConfig()</strong> <span class="implementation-location">apps/worker/src/config.ts · lines 16–41</span></li><li class="implementation-item"><strong>get()</strong> <span class="implementation-location">apps/api/src/paypal.ts · lines 243–254</span></li><li class="implementation-item"><strong>requireOperation()</strong> <span class="implementation-location">apps/worker/src/executor.ts · lines 275–286</span></li><li class="implementation-item"><strong>settleReservation()</strong> <span class="implementation-location">apps/worker/src/executor.ts · lines 292–306</span></li><li class="implementation-item"><strong>captureOrder()</strong> <span class="implementation-location">apps/worker/src/executor.ts · lines 123–166</span></li><li class="implementation-item"><strong>execute()</strong> <span class="implementation-location">apps/worker/src/executor.ts · lines 60–85</span></li><li class="implementation-item"><strong>ProviderJobExecutor</strong> <span class="implementation-location">apps/worker/src/executor.ts · lines 49–334</span></li><li class="implementation-item"><strong>createOrder()</strong> <span class="implementation-location">apps/worker/src/executor.ts · lines 87–121</span></li><li class="implementation-item"><strong>reconcileOrder()</strong> <span class="implementation-location">apps/worker/src/executor.ts · lines 168–215</span></li><li class="implementation-item"><strong>HttpPayPalClient</strong> <span class="implementation-location">packages/paypal/src/index.ts · lines 117–274</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_9e506032e4d17eda">
+              <div class="workflow-number">13</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 13</div>
+                <h3 class="workflow-title">PayPal payment operation status and capture</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>After a PayPal status refresh returns an operation that is not completed, PayPalStatus may submit a capture request; the user can also invoke capture explicitly.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Capture a PayPal operation</p></section><section class="context-panel"><h3>What it produces</h3><p>PayPal operation</p></section><section class="context-panel"><h3>Who relies on it</h3><p>PayPal / payment provider</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Capture request is submitted for the referenced PayPal action</li><li>Status is refreshed after a successful request</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>PayPalStatus()</strong> <span class="implementation-location">apps/web/app/components/paypal-status.tsx · lines 22–197</span></li><li class="implementation-item"><strong>capture()</strong> <span class="implementation-location">apps/web/app/components/paypal-status.tsx · lines 82–95</span></li><li class="implementation-item"><strong>request()</strong> <span class="implementation-location">apps/web/app/components/paypal-status.tsx · lines 33–41</span></li><li class="implementation-item"><strong>refresh()</strong> <span class="implementation-location">apps/web/app/components/paypal-status.tsx · lines 43–61</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_340dd159dc4409f1">
+              <div class="workflow-number">14</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 14</div>
+                <h3 class="workflow-title">Create a PayPal order under a mandate</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An authenticated user or agent submits a PayPal order request; the route resolves its environment, agent, mandate and ledger account, evaluates authority, verifies account integrity, then reserves and creates or queues the provider order.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Request an authorized PayPal order for an agent action</p></section><section class="context-panel"><h3>What it produces</h3><p>PayPal order and associated ledger action/reservation</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Authenticated user or agent; PayPal provider</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Creates or queues a provider order after authority evaluation</li><li>Reserves ledger funds for the action</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>principal()</strong> <span class="implementation-location">apps/api/src/paypal-routes.ts · lines 39–57</span></li><li class="implementation-item"><strong>registerPayPalRoutes()</strong> <span class="implementation-location">apps/api/src/paypal-routes.ts · lines 184–1115</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-7">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 7</div><h2>Review workflows</h2></div>
+            <div class="group-count">3 workflows</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_1c3d41f1e4708e03">
+              <div class="workflow-number">15</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 15</div>
+                <h3 class="workflow-title">Review and decide agent approval requests</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An operator chooses approve or reject for a displayed approval; the approval hook calls the corresponding API operation and refetches the approval list after server response.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Approve or reject a pending agent action request</p></section><section class="context-panel"><h3>What it produces</h3><p>ApprovalItem / approval request</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Agent that initiated the action; operator identity is not authenticated in these chunks.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Decision is submitted through the approval API.</li><li>Approval list is refreshed after server response.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>mapApprovalDtoToItem()</strong> <span class="implementation-location">apps/web/lib/api/mappers/approvals.ts · lines 4–88</span></li><li class="implementation-item"><strong>ApprovalDetailDrawer()</strong> <span class="implementation-location">apps/web/components/approvals/ApprovalDetailDrawer.tsx · lines 28–305</span></li><li class="implementation-item"><strong>useApprovals()</strong> <span class="implementation-location">apps/web/lib/api/hooks/use-approvals.ts · lines 19–86</span></li><li class="implementation-item"><strong>ApprovalCard()</strong> <span class="implementation-location">apps/web/components/approvals/ApprovalCard.tsx · lines 37–306</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_8ea9f959d8b20643">
+              <div class="workflow-number">16</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 16</div>
+                <h3 class="workflow-title">Review and decide approval requests</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An operator-facing ApprovalsInbox loads approval items for an active environment and invokes approve or reject callbacks; after callback success, the UI updates its local pending count and selected item state.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Approve or reject a request awaiting sign-off</p></section><section class="context-panel"><h3>What it produces</h3><p>ApprovalItem</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Reflects a confirmed callback result in the displayed approval and pending-count state</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>ApprovalsInbox()</strong> <span class="implementation-location">apps/web/components/approvals/ApprovalsInbox.tsx · lines 20–436</span></li><li class="implementation-item"><strong>handleApprove()</strong> <span class="implementation-location">apps/web/components/approvals/ApprovalsInbox.tsx · lines 49–77</span></li><li class="implementation-item"><strong>handleReject()</strong> <span class="implementation-location">apps/web/components/approvals/ApprovalsInbox.tsx · lines 80–107</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_710640366a024e07">
+              <div class="workflow-number">17</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 17</div>
+                <h3 class="workflow-title">Review a proposed budget allocation and send an approval or rejection decision</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>When a pending proposal is presented, the user may approve it through an environment approval endpoint; a successful gateway response clears the proposal and displays delegation details. Rejection is separately submitted as a best-effort request.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Decide whether to authorize the displayed proposal</p></section><section class="context-panel"><h3>What it produces</h3><p>pending approval proposal and proposed allocations</p></section><section class="context-panel"><h3>Who relies on it</h3><p>chat user and PayGuardian Gateway</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Approval response can report child mandates and delegated amounts</li><li>Rejection clears the proposal in the UI and records a rejection attempt</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>AssistantView()</strong> <span class="implementation-location">apps/web/components/chat/assistant-view.tsx · lines 97–1815</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-8">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 8</div><h2>Render Markdown content and specialized embedded content in the web client</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_8fc3536c84a5a089">
+              <div class="workflow-number">18</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 18</div>
+                <h3 class="workflow-title">Render Markdown content and specialized embedded content in the web client</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>The web client receives content through AIRenderer, parses Markdown, dispatches recognized code blocks to specialized renderers, and presents the result in the page.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>View formatted content and embedded visual or document content</p></section><section class="context-panel"><h3>What it produces</h3><p>AIRenderer content, including chart, Plotly, PDF, HTML, and document blocks</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Web client user; identity is not established by this component</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Presents readable formatted content and supported structured visualizations or documents in the page</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>AIRenderer()</strong> <span class="implementation-location">apps/web/components/rendering/ai-renderer.tsx · lines 24–219</span></li><li class="implementation-item"><strong>code()</strong> <span class="implementation-location">apps/web/components/rendering/ai-renderer.tsx · lines 58–115</span></li><li class="implementation-item"><strong>RechartsRenderer()</strong> <span class="implementation-location">apps/web/components/rendering/renderers/recharts-renderer.tsx · lines 48–365</span></li><li class="implementation-item"><strong>classifyCodeBlock()</strong> <span class="implementation-location">apps/web/components/rendering/utils/code-classifier.ts · lines 4–76</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-9">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 9</div><h2>Delegated workflows</h2></div>
+            <div class="group-count">3 workflows</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_763b4ee9a036c293">
+              <div class="workflow-number">19</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 19</div>
+                <h3 class="workflow-title">Specialist task execution and delegated payment request</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A specialist subagent executes a task, checks delegated balance when needed, and requests payment through MCP tools; a successful request is represented in the returned payment authorization data.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Fulfill an assigned specialist task and request payment using delegated authority.</p></section><section class="context-panel"><h3>What it produces</h3><p>payment request and child mandate</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Merchant, vendor, or service provider named in the payment request</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Enables a specialist to request funds for its assigned task.</li><li>Records a payment intent and authorization-related details when the MCP request reports success.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>execute_specialist_agent()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/personal_langgraph.py · lines 523–1026</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_10b2c062615ffbd9">
+              <div class="workflow-number">20</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 20</div>
+                <h3 class="workflow-title">Plan delegated work, obtain quotes, and allocate mandate budgets.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>PersonalLangGraphAgent plans and discovers subagent work, prices tasks, compares allocations with reserve, optionally requests user approval, and checks/delegates Gateway child mandates.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Fulfill a user request by arranging suitable subagent tasks within available authority and reserve.</p></section><section class="context-panel"><h3>What it produces</h3><p>subagent task, quote, budget allocation, and child mandate.</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Subagent agents and PayGuardian Gateway; user may receive an approval request.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Produces priced proposals and authorization-pending tasks.</li><li>Constrains child allocations against parent budgets and top-level proposals against remaining reserve.</li><li>Gateway authorization can result in an active delegated child mandate.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>PersonalLangGraphAgent</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/personal_langgraph.py · lines 2369–4718</span></li><li class="implementation-item"><strong>PersonalLangGraphAgent._planner_node()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/personal_langgraph.py · lines 2431–2658</span></li><li class="implementation-item"><strong>PersonalLangGraphAgent._gateway_authorizer_node()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/personal_langgraph.py · lines 3301–3613</span></li><li class="implementation-item"><strong>PersonalLangGraphAgent._budget_planner_node()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/personal_langgraph.py · lines 3058–3298</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_915338c36bd90766">
+              <div class="workflow-number">21</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 21</div>
+                <h3 class="workflow-title">Execute delegated payment actions for authorized subagent tasks.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>For authorized or payment-execution tasks, the runner may create/allocate ledger accounts, reserve and capture a Gateway action, or create a PayPal order and return an approval URL.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Arrange fulfillment of a quoted task using the authorized task amount and delegated mandate.</p></section><section class="context-panel"><h3>What it produces</h3><p>child mandate, ledger account, reserved action, and PayPal order.</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Subagent agent, PayGuardian Gateway, and potentially a buyer approving a PayPal order.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>May initialize parent and child ledger accounts and allocate funds.</li><li>May reserve and capture a Gateway action.</li><li>May create a PayPal order that awaits buyer approval.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>PersonalLangGraphAgent._execution_runner_node()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/personal_langgraph.py · lines 3616–4076</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-10">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 10</div><h2>Submit workflows</h2></div>
+            <div class="group-count">3 workflows</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_3001aa1a866710da">
+              <div class="workflow-number">22</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 22</div>
+                <h3 class="workflow-title">Compose and submit an agent prompt with selected mode/model and optional files</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A user composes a prompt and/or attaches files in AIComposer; the component passes the submission data to its supplied onSubmit callback and resets local input state. Downstream processing is not shown.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Send a prompt or attached files to the caller-provided chat flow</p></section><section class="context-panel"><h3>What it produces</h3><p>AIComposerSubmission (prompt, mode, modelId, modelName, effort, autoMode, attachedFiles, files)</p></section><section class="context-panel"><h3>Who relies on it</h3><p>The caller-provided onSubmit handler; its identity and downstream counterparty are not shown.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Transfers the composed submission to the parent chat flow</li><li>Clears the component’s local prompt and attachment state after callback invocation</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>AIComposer()</strong> <span class="implementation-location">apps/web/components/chat/ai-composer.tsx · lines 197–1236</span></li><li class="implementation-item"><strong>handleSubmitPrompt()</strong> <span class="implementation-location">apps/web/components/chat/ai-composer.tsx · lines 545–570</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_c35256290869dd46">
+              <div class="workflow-number">23</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 23</div>
+                <h3 class="workflow-title">Submit a conversation message for agent execution</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An authenticated environment owner submits a nonempty conversation message; the API records the user message, creates a queued run and root task, and enqueues agent runtime work.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Ask the Personal Agent to handle a request in a conversation</p></section><section class="context-panel"><h3>What it produces</h3><p>Conversation message, run, and root task</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Authenticated environment owner and agent runtime</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Persists the user message</li><li>Queues agent work and exposes run/task identifiers</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>environmentFor()</strong> <span class="implementation-location">apps/api/src/chatbot-routes.ts · lines 63–80</span></li><li class="implementation-item"><strong>registerChatbotRoutes()</strong> <span class="implementation-location">apps/api/src/chatbot-routes.ts · lines 82–1334</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_82f2bf7141ee0685">
+              <div class="workflow-number">24</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 24</div>
+                <h3 class="workflow-title">Submit a prompt to the Personal Agent and view its streamed response</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A chat user submits a prompt; the UI creates or uses an environment conversation, posts the message to the gateway, receives run events, and displays and caches assistant output.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Ask the agent to perform or explain a task</p></section><section class="context-panel"><h3>What it produces</h3><p>conversation and message</p></section><section class="context-panel"><h3>Who relies on it</h3><p>chat user and gateway agent runtime</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>User receives the assistant response in the conversation</li><li>Messages are cached locally for subsequent display</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>handleSendMessage()</strong> <span class="implementation-location">apps/web/components/chat/assistant-view.tsx · lines 848–1116</span></li><li class="implementation-item"><strong>handleSSEEvent()</strong> <span class="implementation-location">apps/web/components/chat/assistant-view.tsx · lines 535–837</span></li><li class="implementation-item"><strong>AssistantView()</strong> <span class="implementation-location">apps/web/components/chat/assistant-view.tsx · lines 97–1815</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-11">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 11</div><h2>Budget workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_8dd4cba5b3436c17">
+              <div class="workflow-number">25</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 25</div>
+                <h3 class="workflow-title">Approve budget proposals and create hierarchical specialist-agent delegations.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An authenticated user submits an approved budget proposal; the API resolves or registers requested agents, delegates budget and permitted actions through a mandate hierarchy, records approval/audit outcomes, and returns the delegation result.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>A user authorizes budget and actions for requested agents.</p></section><section class="context-panel"><h3>What it produces</h3><p>Mandate and proposed allocations</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Requested specialist agents within the user&#x27;s environment</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Allocates bounded authority to agents</li><li>Records successful, partial, or failed delegation outcomes</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>principal()</strong> <span class="implementation-location">apps/api/src/phase4-routes.ts · lines 19–37</span></li><li class="implementation-item"><strong>registerPhase4Routes()</strong> <span class="implementation-location">apps/api/src/phase4-routes.ts · lines 58–1296</span></li><li class="implementation-item"><strong>handleBudgetProposalApproval()</strong> <span class="implementation-location">apps/api/src/phase4-routes.ts · lines 224–622</span></li><li class="implementation-item"><strong>delegateMandate()</strong> <span class="implementation-location">packages/domain/src/index.ts · lines 227–330</span></li><li class="implementation-item"><strong>createRootMandate()</strong> <span class="implementation-location">packages/domain/src/index.ts · lines 98–135</span></li><li class="implementation-item"><strong>topupMandate()</strong> <span class="implementation-location">packages/domain/src/index.ts · lines 341–525</span></li><li class="implementation-item"><strong>delegate()</strong> <span class="implementation-location">apps/api/src/phase2.ts · lines 289–578</span></li><li class="implementation-item"><strong>environmentFor()</strong> <span class="implementation-location">apps/api/src/phase4-routes.ts · lines 39–56</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-12">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 12</div><h2>Specialist workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_d853d07e8824f902">
+              <div class="workflow-number">26</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 26</div>
+                <h3 class="workflow-title">Attach specialist child agent to environment and optionally delegate spending authority</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An operator chooses a specialist agent and parent in the Agent library, then the UI registers a child agent for the current environment, may request a budget mandate, and updates the workspace graph after confirmed API responses.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Connect a selected specialist agent under a selected parent, with a configured budget and payment rails</p></section><section class="context-panel"><h3>What it produces</h3><p>child agent and optional delegated mandate</p></section><section class="context-panel"><h3>Who relies on it</h3><p>selected parent agent and newly registered child agent</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Makes the specialist available as a workspace graph node</li><li>A positive budget leads to an attempted mandate delegation; a zero budget yields an unfunded structural node</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>AgentLibrary()</strong> <span class="implementation-location">apps/web/components/agents/AgentLibrary.tsx · lines 18–432</span></li><li class="implementation-item"><strong>handleAttach()</strong> <span class="implementation-location">apps/web/components/agents/AttachAgentDialog.tsx · lines 80–210</span></li><li class="implementation-item"><strong>AttachAgentDialog()</strong> <span class="implementation-location">apps/web/components/agents/AttachAgentDialog.tsx · lines 29–346</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-13">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 13</div><h2>Delegated workflows</h2></div>
+            <div class="group-count">2 workflows</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_e9c46c679c03f7e0">
+              <div class="workflow-number">27</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 27</div>
+                <h3 class="workflow-title">Present delegated payment details and initiate PayPal checkout and capture.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>The OAuthConsentCard presents transaction details and offers PayPal checkout; PayPal approval invokes order capture through the API client and reports the resulting transaction to its callback.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Review the displayed subagent and transaction details, then authorize checkout or deny it.</p></section><section class="context-panel"><h3>What it produces</h3><p>PayPal order and payment capture associated with mandateId, approvalId, actionId, amountMinor, currency, and recipient.</p></section><section class="context-panel"><h3>Who relies on it</h3><p>The displayed Authorized Operator and Specialist Subagent; PayPal is the checkout counterparty.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>A checkout order is created and, after PayPal approval, a capture request is made through the application API.</li><li>The parent callback receives transaction and capture details.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>OAuthConsentCard()</strong> <span class="implementation-location">apps/web/components/ui/oauth-consent-react.tsx · lines 109–256</span></li><li class="implementation-item"><strong>PayPalCheckoutButton()</strong> <span class="implementation-location">apps/web/components/ui/paypal-checkout-button.tsx · lines 34–206</span></li><li class="implementation-item"><strong>PaymentApprovalOverlay()</strong> <span class="implementation-location">apps/web/components/ui/payment-approval-overlay.tsx · lines 28–122</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_45779a79d59c2972">
+              <div class="workflow-number">28</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 28</div>
+                <h3 class="workflow-title">Create delegated mandates for agents</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>Authenticated user or mandate-holding agent submits a delegation request; the gateway validates the parent, child and applicable identity/environment constraints, delegates through AuthorityStore, audits the outcome, and returns a decision.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Delegate authority and a budget to an eligible child agent</p></section><section class="context-panel"><h3>What it produces</h3><p>mandate</p></section><section class="context-panel"><h3>Who relies on it</h3><p>child agent identified by holderAgentId</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Creates a delegated mandate when authority rules allow it</li><li>Records whether delegation succeeded or was denied</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>principal()</strong> <span class="implementation-location">apps/api/src/phase2-routes.ts · lines 11–29</span></li><li class="implementation-item"><strong>registerPhase2Routes()</strong> <span class="implementation-location">apps/api/src/phase2-routes.ts · lines 31–584</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-14">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 14</div><h2>Agent workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_71d4f17d48863e8b">
+              <div class="workflow-number">29</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 29</div>
+                <h3 class="workflow-title">Manage agent API-key representations in the Developer portal</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A developer interacts with KeyManager to create, rotate, or revoke an agent API key; the component updates its local key list and may display the newly created or rotated secret. No persistence or gateway-side credential effect is established by this fragment.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Configure a credential for a specialist agent, rotate it, or mark it revoked in the displayed key list</p></section><section class="context-panel"><h3>What it produces</h3><p>ApiKey</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Specialist agent using the credential; actual gateway enforcement is not shown</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>The component presents key environment and scopes alongside the credential</li><li>Creation and rotation expose a secret in component UI state</li><li>Revocation changes the displayed key status</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>KeyManager()</strong> <span class="implementation-location">apps/web/components/developer/KeyManager.tsx · lines 24–426</span></li><li class="implementation-item"><strong>handleRevokeKey()</strong> <span class="implementation-location">apps/web/components/developer/KeyManager.tsx · lines 104–112</span></li><li class="implementation-item"><strong>handleCreateKey()</strong> <span class="implementation-location">apps/web/components/developer/KeyManager.tsx · lines 53–77</span></li><li class="implementation-item"><strong>handleRotateKey()</strong> <span class="implementation-location">apps/web/components/developer/KeyManager.tsx · lines 79–102</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-15">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 15</div><h2>Context workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_c23c35502b83e2b2">
+              <div class="workflow-number">30</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 30</div>
+                <h3 class="workflow-title">Compile dynamic policy context and operational prompts for the Personal Agent</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>ContextCompiler compiles a message and conversation state, optionally retrieves live mandates, agents, and approvals from Gateway, and returns operational context including intent, budget reserve, active delegations, and proposal status.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Enable the Personal Agent to interpret a user message using current budget, mandate, and approval facts</p></section><section class="context-panel"><h3>What it produces</h3><p>root user mandate, child mandates, budget reserve, and approval proposal</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Personal Agent; Gateway supplies live application facts</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Provides context for reporting allocations and remaining reserve</li><li>Distinguishes pending, approved, and rejected proposals in the rendered context</li><li>Supplies policy guidance for delegated execution</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>ContextCompiler.compile_operational_context()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/context_compiler.py · lines 1304–1552</span></li><li class="implementation-item"><strong>ContextCompiler.fetch_live_application_context()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/context_compiler.py · lines 1181–1302</span></li><li class="implementation-item"><strong>ContextCompiler.classify_intent()</strong> <span class="implementation-location">apps/agent-runtime/src/agent_runtime/context_compiler.py · lines 752–1139</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-16">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 16</div><h2>Payguardian workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_1da07648ff3c01f7">
+              <div class="workflow-number">31</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 31</div>
+                <h3 class="workflow-title">Authenticate or register a PayGuardian account using email and password.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A visitor submits the LoginPage email form; the page invokes signIn or signUp and, depending on result, displays confirmation or routes the user onward.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Sign in or create an account to access PayGuardian.</p></section><section class="context-panel"><h3>What it produces</h3><p>PayGuardian account</p></section><section class="context-panel"><h3>Who relies on it</h3><p>The submitting account holder; identity/provider implementation is not supplied.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Successful sign-in proceeds to environment listing and navigation.</li><li>Sign-up with required confirmation presents a confirmation message; otherwise the page attempts post-auth routing.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>handleEmailAuth()</strong> <span class="implementation-location">apps/web/app/login/page.tsx · lines 198–223</span></li><li class="implementation-item"><strong>LoginPage()</strong> <span class="implementation-location">apps/web/app/login/page.tsx · lines 9–746</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-17">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 17</div><h2>Streamed workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_74b68e3e26ff039f">
+              <div class="workflow-number">32</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 32</div>
+                <h3 class="workflow-title">Provide a streamed response about PayGuardian from a supplied prompt.</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A caller posts a prompt and optional modelId to POST /api/about-payguardian; the route obtains generated chunks from AboutPayGuardianService and streams them as SSE events.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Submit a prompt and receive generated text.</p></section><section class="context-panel"><h3>What it produces</h3><p>prompt and streamed response</p></section><section class="context-panel"><h3>Who relies on it</h3><p>API caller; caller identity is not established here.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Text chunks are returned incrementally; completion or stream error is represented in the stream.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>POST()</strong> <span class="implementation-location">apps/web/app/api/about-payguardian/route.ts · lines 6–53</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-18">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 18</div><h2>View workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_170e62a56f77f5ef">
+              <div class="workflow-number">33</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 33</div>
+                <h3 class="workflow-title">View, filter, and select agent-network nodes</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A user views and filters the agent network, selects a node in the canvas or accessible list, and the UI records the selected node ID for inspection.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Find and inspect an agent node and its authority/budget presentation</p></section><section class="context-panel"><h3>What it produces</h3><p>AgentNodeData in graphNodes</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Displays agent role, status, funded state, and allocated/spent/available amounts</li><li>Selection records the node ID in workspace state and can notify a parent callback</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>AgentNetworkCanvas()</strong> <span class="implementation-location">apps/web/components/canvas/agent-network-canvas.tsx · lines 27–752</span></li><li class="implementation-item"><strong>AgentNetworkListView()</strong> <span class="implementation-location">apps/web/components/canvas/agent-network-list-view.tsx · lines 44–294</span></li><li class="implementation-item"><strong>handlePointerDown()</strong> <span class="implementation-location">apps/web/components/canvas/agent-network-canvas.tsx · lines 595–619</span></li><li class="implementation-item"><strong>createNodeSprite()</strong> <span class="implementation-location">apps/web/components/canvas/agent-network-canvas.tsx · lines 98–219</span></li><li class="implementation-item"><strong>NodeDetailDrawer()</strong> <span class="implementation-location">apps/web/components/canvas/node-detail-drawer.tsx · lines 31–387</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-19">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 19</div><h2>Authority workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_4955091372403af3">
+              <div class="workflow-number">34</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 34</div>
+                <h3 class="workflow-title">Authority Revocation Center</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A Security Center operator selects an agent branch or root authority, reviews subtree impact, confirms revocation, and the UI submits a mandate or environment revocation request.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Revoke a selected mandate or environment authority after reviewing the displayed subtree impact.</p></section><section class="context-panel"><h3>What it produces</h3><p>mandate and environment authority</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Target agent and downstream child agents; external transaction counterparties are not directly updated in this code.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Requests authority invalidation to stop future actions.</li><li>The dialog communicates that completed external transactions cannot be undone.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>handleConfirmRevoke()</strong> <span class="implementation-location">apps/web/components/security/SecurityCenter.tsx · lines 79–98</span></li><li class="implementation-item"><strong>SecurityCenter()</strong> <span class="implementation-location">apps/web/components/security/SecurityCenter.tsx · lines 21–230</span></li><li class="implementation-item"><strong>RevocationDialog()</strong> <span class="implementation-location">apps/web/components/security/RevocationDialog.tsx · lines 27–166</span></li><li class="implementation-item"><strong>handleOpenRevokeAgent()</strong> <span class="implementation-location">apps/web/components/security/SecurityCenter.tsx · lines 63–77</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-20">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 20</div><h2>Sandbox Attack Simulator</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_dc42c88560f8ed16">
+              <div class="workflow-number">35</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 35</div>
+                <h3 class="workflow-title">Sandbox Attack Simulator</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A user triggers an attack vector in AttackSimulator; sandbox-only UI logic records simulated policy outcomes in local graph, chat, feedback, and simulation-log state.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Exercise sample adversarial payment and authority scenarios and inspect the modeled gateway-defense outcomes.</p></section><section class="context-panel"><h3>What it produces</h3><p>AttackVector and SimulationLogItem</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Simulated attacker agents and the local sandbox workspace; no real payment counterparty is shown as affected.</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Shows modeled denial, hold, or flag outcomes and associated local UI records.</li><li>Simulation badge and copy state that events are simulated and no real funds are affected.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>AttackSimulator()</strong> <span class="implementation-location">apps/web/components/simulator/AttackSimulator.tsx · lines 17–540</span></li><li class="implementation-item"><strong>handleExecuteAttack()</strong> <span class="implementation-location">apps/web/components/simulator/AttackSimulator.tsx · lines 38–336</span></li><li class="implementation-item"><strong>SimulationBadge()</strong> <span class="implementation-location">apps/web/components/simulator/SimulationBadge.tsx · lines 12–25</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-21">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 21</div><h2>Select workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_0b57f78ead0a111c">
+              <div class="workflow-number">36</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 36</div>
+                <h3 class="workflow-title">Select an environment task session</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>Workspace operator selects a listed session; the UI stores it as active and clears current chat messages.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Open a selected task session in the workspace</p></section><section class="context-panel"><h3>What it produces</h3><p>task session</p></section><section class="context-panel"><h3>Who relies on it</h3><p>workspace operator</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Sets the selected session as active</li><li>Starts a pristine chat thread because session-history persistence is described as unavailable</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>handleSelectSession()</strong> <span class="implementation-location">apps/web/components/workspace/sessions-memory.tsx · lines 77–83</span></li><li class="implementation-item"><strong>SessionsGrid()</strong> <span class="implementation-location">apps/web/components/workspace/sessions-memory.tsx · lines 48–286</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-22">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 22</div><h2>Action workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_85f7c016f23cdba6">
+              <div class="workflow-number">37</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 37</div>
+                <h3 class="workflow-title">Authorize protected actions and reserve ledger funds</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An authenticated user or agent requests a protected action; the API validates the environment, agent, mandate and applicable approval, verifies ledger integrity, reserves funds, and records the result.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Request reservation of funds for an agent action</p></section><section class="context-panel"><h3>What it produces</h3><p>protected action and ledger reservation</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Agent and environment ledger account</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Funds are reserved for an authorized action; a qualifying approval request or denial may also be recorded.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>registerPhase3Routes()</strong> <span class="implementation-location">apps/api/src/phase3-routes.ts · lines 35–649</span></li><li class="implementation-item"><strong>authorizeAndReserve()</strong> <span class="implementation-location">apps/api/src/phase3.ts · lines 285–334</span></li><li class="implementation-item"><strong>validateAmount()</strong> <span class="implementation-location">apps/api/src/phase3.ts · lines 86–90</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-23">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 23</div><h2>Ledger workflows</h2></div>
+            <div class="group-count">2 workflows</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_3dc82ea30ab9e0e9">
+              <div class="workflow-number">38</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 38</div>
+                <h3 class="workflow-title">Maintain ledger reservations and balance transitions</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>InMemoryLedger.reserve moves an amount from available to reserved funds and records a transition; capture or release subsequently resolves a held reservation.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>What it produces</h3><p>LedgerAccount and Reservation</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Represent held, captured, or released funds while maintaining a verifiable balance history.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>reserve()</strong> <span class="implementation-location">packages/domain/src/ledger.ts · lines 423–470</span></li><li class="implementation-item"><strong>InMemoryLedger</strong> <span class="implementation-location">packages/domain/src/ledger.ts · lines 267–653</span></li><li class="implementation-item"><strong>release()</strong> <span class="implementation-location">packages/domain/src/ledger.ts · lines 508–542</span></li><li class="implementation-item"><strong>capture()</strong> <span class="implementation-location">packages/domain/src/ledger.ts · lines 472–506</span></li><li class="implementation-item"><strong>verifyWalletIntegrity()</strong> <span class="implementation-location">packages/domain/src/ledger.ts · lines 98–265</span></li></ul></details>
+              </div>
+            </article>
+            <article class="workflow-card" data-workflow-id="business_path_16dc4f39bd7770f0">
+              <div class="workflow-number">39</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 39</div>
+                <h3 class="workflow-title">Create ledger accounts for mandate budgets</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>An authenticated user creates a ledger account for a mandate in an active environment, subject to currency and initial-funding constraints; the API records an audit event and returns the account.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Establish an account for a mandate in an environment</p></section><section class="context-panel"><h3>What it produces</h3><p>ledger account</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Environment and mandate</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Makes a mandate budget available as an environment-scoped ledger account.</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>registerPhase3Routes()</strong> <span class="implementation-location">apps/api/src/phase3-routes.ts · lines 35–649</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-24">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 24</div><h2>Provider workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_458b3632830ccf19">
+              <div class="workflow-number">40</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 40</div>
+                <h3 class="workflow-title">Manage provider job processing and lease lifecycle</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A caller enqueues provider work; a worker claims an eligible job under a time-limited lease, then renews, completes, or fails it, with retry scheduling where applicable.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>A worker identified by workerId claims eligible provider work and records its outcome</p></section><section class="context-panel"><h3>What it produces</h3><p>ProviderJob</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Provider job worker; provider identity is recorded on the job</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Work can be claimed in available-time order</li><li>Lease ownership and expiry bound renewal and terminal updates</li><li>Failure can return work to queued state for retry or mark it failed</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>claim()</strong> <span class="implementation-location">apps/api/src/provider-jobs.ts · lines 139–182</span></li><li class="implementation-item"><strong>enqueue()</strong> <span class="implementation-location">apps/api/src/provider-jobs.ts · lines 102–137</span></li><li class="implementation-item"><strong>InMemoryProviderJobStore</strong> <span class="implementation-location">apps/api/src/provider-jobs.ts · lines 90–268</span></li><li class="implementation-item"><strong>isClaimable()</strong> <span class="implementation-location">apps/api/src/provider-jobs.ts · lines 413–420</span></li><li class="implementation-item"><strong>ownsActiveLease()</strong> <span class="implementation-location">apps/api/src/provider-jobs.ts · lines 422–435</span></li><li class="implementation-item"><strong>fail()</strong> <span class="implementation-location">apps/api/src/provider-jobs.ts · lines 223–251</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-25">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 25</div><h2>Session workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_85810d37e8add8b0">
+              <div class="workflow-number">41</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 41</div>
+                <h3 class="workflow-title">Establish browser authentication session and select the post-authentication destination</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>The browser callback reads an authorization code, exchanges it for a session, checks session and environment state, and navigates to onboarding, dashboard, or login.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>A browser user completes the authentication callback and reaches the appropriate application destination</p></section><section class="context-panel"><h3>What it produces</h3><p>Supabase browser session and environment list</p></section><section class="context-panel"><h3>Who relies on it</h3><p>PayGuardian browser user; Supabase authentication service</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>A valid session continues into the application</li><li>Users without environments or with environment lookup failure are routed to onboarding</li><li>Failed session establishment returns the user to login</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>AuthCallbackPage()</strong> <span class="implementation-location">apps/web/app/auth/callback/page.tsx · lines 31–99</span></li><li class="implementation-item"><strong>handleAuth()</strong> <span class="implementation-location">apps/web/app/auth/callback/page.tsx · lines 45–77</span></li><li class="implementation-item"><strong>createSupabaseBrowserClient()</strong> <span class="implementation-location">apps/web/app/lib/supabase-browser.ts · lines 5–17</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-26">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 26</div><h2>Request workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_bbe63dca765f1e4c">
+              <div class="workflow-number">42</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 42</div>
+                <h3 class="workflow-title">Forward API requests to the internal gateway</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>A web client sends a request to the catch-all proxy route; the route forwards it to the configured internal API gateway and relays the upstream response.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Use gateway-backed PayGuardian functionality through the web application</p></section><section class="context-panel"><h3>What it produces</h3><p>Gateway API request and response</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Internal API gateway</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Makes gateway API operations available through the web application</li><li>Returns the upstream response status and content to the caller</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>resolveAuthHeader()</strong> <span class="implementation-location">apps/web/app/api/proxy/[...path]/route.ts · lines 12–45</span></li><li class="implementation-item"><strong>handleProxy()</strong> <span class="implementation-location">apps/web/app/api/proxy/[...path]/route.ts · lines 47–144</span></li></ul></details>
+              </div>
+            </article></div>
+        </section>
+        <section class="workflow-group" id="workflow-area-27">
+          <header class="group-header">
+            <div><div class="eyebrow">Workflow area 27</div><h2>Optional workflows</h2></div>
+            <div class="group-count">1 workflow</div>
+          </header>
+          <div class="group-paths">
+            <article class="workflow-card" data-workflow-id="business_path_28bbb237722851c7">
+              <div class="workflow-number">43</div>
+              <div class="workflow-content">
+                <div class="eyebrow">Workflow 43</div>
+                <h3 class="workflow-title">Assess release readiness from repository checks and optional deployment health/migration status</h3>
+                <section class="workflow-summary"><h3>What this workflow does</h3><p>The release-readiness CLI runs configured repository and deployment checks, records PASS/WARN/FAIL results, prints them, and determines the process exit code.</p></section>
+                <div class="context-grid"><section class="context-panel"><h3>Purpose</h3><p>Determine whether the configured readiness checks pass</p></section><section class="context-panel"><h3>What it produces</h3><p>Release-readiness results and target service/migration status</p></section><section class="context-panel"><h3>Who relies on it</h3><p>Release operator and configured API, agent-runtime, or Supabase target</p></section></div>
+                <section class="value-section"><h3>Why this workflow matters</h3><ul><li>Provides a summarized readiness outcome and process status for release workflow</li></ul></section>
+                <details class="supporting-code"><summary>Implementation references</summary><ul class="evidence-list"><li class="implementation-item"><strong>main()</strong> <span class="implementation-location">scripts/release-readiness.mjs · lines 327–342</span></li><li class="implementation-item"><strong>checkHealthEndpoints()</strong> <span class="implementation-location">scripts/release-readiness.mjs · lines 312–325</span></li><li class="implementation-item"><strong>checkRemoteMigrationStatus()</strong> <span class="implementation-location">scripts/release-readiness.mjs · lines 254–290</span></li><li class="implementation-item"><strong>validateHealthResponse()</strong> <span class="implementation-location">scripts/release-readiness.mjs · lines 123–137</span></li><li class="implementation-item"><strong>checkHealthEndpoint()</strong> <span class="implementation-location">scripts/release-readiness.mjs · lines 292–310</span></li></ul></details>
+              </div>
+            </article></div>
+        </section></main></div>
+<style id="unvibecode-review-continue-style">
+#unvibecode-review-continue{
+  width:min(1180px,calc(100% - 32px));
+  margin:26px auto 18px;
+  padding:16px 18px;
+  border:1px solid #dbe3ee;
+  border-radius:12px;
+  background:#f8fafc;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  color:#0f172a;
+  font-family:Segoe UI,Arial,sans-serif;
+}
+#unvibecode-review-continue .uvc-next-kicker{
+  margin:0 0 3px;
+  color:#64748b;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+#unvibecode-review-continue .uvc-next-copy{
+  margin:0;
+  color:#475569;
+  font-size:13px;
+  line-height:1.4;
+}
+#unvibecode-review-continue .uvc-next-button{
+  appearance:none;
+  border:0;
+  border-radius:9px;
+  background:#4f46e5;
+  color:#fff;
+  padding:10px 14px;
+  font:700 13px/1.2 Segoe UI,Arial,sans-serif;
+  cursor:pointer;
+  white-space:nowrap;
+}
+@media(max-width:700px){
+  #unvibecode-review-continue{align-items:stretch;flex-direction:column}
+  #unvibecode-review-continue .uvc-next-button{width:100%}
+}
+</style>
+<section id="unvibecode-review-continue" aria-label="Continue your review">
+  <div>
+    <p class="uvc-next-kicker">Continue your review</p>
+    <p class="uvc-next-copy">Structured graph of your codebase linking different files and symbols.</p>
+  </div>
+  <button class="uvc-next-button" type="button" data-target="connected-code">Connected Code →</button>
+</section>
+<script>
+(function(){
+  const section = document.getElementById('unvibecode-review-continue');
+  if (!section) return;
+  const button = section.querySelector('[data-target]');
+  if (!button) return;
+  if (new URLSearchParams(window.location.search).get('early') === '1') {
+    button.setAttribute('data-target', 'llm-context');
+    button.textContent = 'LLM Context →';
+    section.querySelector('.uvc-next-copy').textContent = 'Download repository context for LLM or API analysis.';
+  }
+  button.addEventListener('click', function(){
+    const target = button.getAttribute('data-target');
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'unvibecode-select-view',
+        target: target
+      }, '*');
+      return;
+    }
+    window.location.href = '00_unvibecode_results.html#' + encodeURIComponent(target);
+  });
+})();
+</script>
+
+<script>if(window.self!==window.top)document.documentElement.classList.add("uvc-embedded");</script></body></html>

@@ -1,0 +1,307 @@
+Scanning workspace: /opt/unvibecode-engine/api-jobs/public-preview/f2c372dfd4ee4d8f9dd34a190c90ae05/input/PayGuardian
+Parsing source files: 350
+[STAGE 1 COMPLETE] 350 files, 173 internal file edges, 0 package-level edges, 1,257 unresolved/external imports, 0 symbol edges, 0 unresolved Go usages
+
+[SHIPREADYV2 LINKER RESOLUTION COMPLETE]
+Output: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_resolved_graph.json
+Files indexed: 350
+Imports: 297 resolved, 0 package-level, 79 partial, 968 unresolved, 86 hard-path skipped, 0 uncertain
+Python enrichment: 22 files, 17 safe constants, 0 dynamic imports marked
+Symbols: 525/2,561 resolved; 150 ambiguous names in index
+Symbol edges added: 527
+Go symbol edges promoted: 0; unresolved Go usages: 0
+
+[SHIPREADYV2 LLM FEED COMPLETE]
+Repository: /opt/unvibecode-engine/api-jobs/public-preview/f2c372dfd4ee4d8f9dd34a190c90ae05/input/PayGuardian
+Resolved graph: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_resolved_graph.json
+Atomic chunks: 1,045
+Chunk relationships: 1,389
+LLM batches: 179
+Feed: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_llm_feed.jsonl
+Tokenizer: tiktoken:cl100k_base
+
+[SHIPREADYV2 SEMANTIC PACKS COMPLETE]
+Source 12K batches: 179
+Semantic packs: 25
+Semantic token range: 35,000 target-min / 55,000 target / 75,000 hard
+Packing guard: 73,500 content/context base + up to 1,500 bridge tokens
+  semantic_pack_001: 62,415 tokens, 4 source batches, 1 component(s), within-range
+  semantic_pack_002: 63,036 tokens, 5 source batches, 1 component(s), within-range
+  semantic_pack_003: 63,357 tokens, 6 source batches, 1 component(s), within-range
+  semantic_pack_004: 54,288 tokens, 4 source batches, 1 component(s), within-range
+  semantic_pack_005: 43,642 tokens, 5 source batches, 2 component(s), within-range
+  semantic_pack_006: 66,302 tokens, 5 source batches, 1 component(s), within-range
+  semantic_pack_007: 54,160 tokens, 5 source batches, 1 component(s), within-range
+  semantic_pack_008: 61,968 tokens, 5 source batches, 1 component(s), within-range
+  semantic_pack_009: 38,301 tokens, 3 source batches, 1 component(s), within-range
+  semantic_pack_010: 38,282 tokens, 4 source batches, 1 component(s), within-range
+  semantic_pack_011: 42,041 tokens, 4 source batches, 1 component(s), within-range
+  semantic_pack_012: 43,501 tokens, 4 source batches, 2 component(s), within-range
+  semantic_pack_013: 38,293 tokens, 4 source batches, 2 component(s), within-range
+  semantic_pack_014: 42,697 tokens, 4 source batches, 2 component(s), within-range
+  semantic_pack_015: 36,919 tokens, 3 source batches, 2 component(s), within-range
+  semantic_pack_016: 41,367 tokens, 4 source batches, 3 component(s), within-range
+  semantic_pack_017: 41,025 tokens, 5 source batches, 3 component(s), within-range
+  semantic_pack_018: 67,698 tokens, 9 source batches, 8 component(s), within-range
+  semantic_pack_019: 71,669 tokens, 26 source batches, 24 component(s), within-range
+  semantic_pack_020: 73,746 tokens, 19 source batches, 19 component(s), within-range
+  semantic_pack_021: 73,615 tokens, 12 source batches, 12 component(s), within-range
+  semantic_pack_022: 73,895 tokens, 11 source batches, 11 component(s), within-range
+  semantic_pack_023: 74,242 tokens, 13 source batches, 13 component(s), within-range
+  semantic_pack_024: 74,939 tokens, 14 source batches, 14 component(s), within-range
+  semantic_pack_025: 3,606 tokens, 1 source batches, 1 component(s), underfilled
+Semantic feed: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_semantic_packs.jsonl
+
+[SHIPREADYV2 UNIFIED PIPELINE COMPLETE]
+Target folder: /opt/unvibecode-engine/api-jobs/public-preview/f2c372dfd4ee4d8f9dd34a190c90ae05/input/PayGuardian
+Run folder:    /tmp/uvc-f79w2eu5/b/run
+Resolved JSON: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_resolved_graph.json
+LLM feed:      /tmp/uvc-f79w2eu5/b/run/shipreadyv2_llm_feed.jsonl
+Semantic feed: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_semantic_packs.jsonl
+
+[SHIPREADYV2 PASS 1 INPUT PREPARATION COMPLETE]
+Semantic input:  /tmp/uvc-f79w2eu5/b/run/shipreadyv2_semantic_packs.jsonl
+Compact taxonomy:/tmp/unvibecode-engine-8p761o0h/engine/archetype_taxonomy_pass1_compact.yaml
+Output JSONL:    /tmp/uvc-f79w2eu5/b/run/shipreadyv2_pass1_llm_inputs.jsonl
+Tokenizer:       tiktoken:cl100k_base
+Shared context:  9,600 tokens
+Taxonomy routing: 7,902 LLM classification tokens; 9,174 deterministic-only tokens
+Semantic packs:  25
+LLM requests:    39
+Request tokens: min=14,108, avg=50,198, max=68,842
+Requests per semantic pack:
+  semantic_pack_001: 2
+  semantic_pack_002: 2
+  semantic_pack_003: 2
+  semantic_pack_004: 1
+  semantic_pack_005: 1
+  semantic_pack_006: 2
+  semantic_pack_007: 1
+  semantic_pack_008: 2
+  semantic_pack_009: 1
+  semantic_pack_010: 1
+  semantic_pack_011: 1
+  semantic_pack_012: 1
+  semantic_pack_013: 1
+  semantic_pack_014: 1
+  semantic_pack_015: 1
+  semantic_pack_016: 1
+  semantic_pack_017: 1
+  semantic_pack_018: 2
+  semantic_pack_019: 2
+  semantic_pack_020: 3
+  semantic_pack_021: 2
+  semantic_pack_022: 3
+  semantic_pack_023: 2
+  semantic_pack_024: 2
+  semantic_pack_025: 1
+Next: run exactly two pass1_semantic_request records for quality review.
+[SHIPREADYV2 PASS 1 FULL REPOSITORY RUN]
+Input:      /tmp/uvc-f79w2eu5/b/run/shipreadyv2_pass1_llm_inputs.jsonl
+Environment:/tmp/unvibecode-engine-8p761o0h/engine/.env
+Runner:     full-v3-parallel-partial-20260717
+Model:      gpt-5.4-mini
+Reasoning:  low
+Risk triggers: NOT supplied to the LLM; deterministic stage only
+Validated 39 prepared requests; selected=39; reused=0; pending=39
+Running 39 pending Pass 1 request(s) with concurrency=2; each request gets one initial attempt and at most one validation correction.
+[1/39] START semantic_pack_001_part_01 | attempt=1/2, input=51,613, reasoning=low, max_output=32,000
+[2/39] START semantic_pack_001_part_02 | attempt=1/2, input=48,166, reasoning=low, max_output=32,000
+  ... semantic_pack_001_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_001_part_02 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_001_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_001_part_02 attempt 1 still processing (20s elapsed)
+[2/39] DONE semantic_pack_001_part_02 in 25.7s | input=55491, cached=6579, output=2952, reasoning=115 | paths=1, facts=3, evidence=20
+[3/39] START semantic_pack_002_part_01 | attempt=1/2, input=46,001, reasoning=low, max_output=32,000
+  ... semantic_pack_001_part_01 attempt 1 still processing (30s elapsed)
+[1/39] DONE semantic_pack_001_part_01 in 34.0s | input=58645, cached=6579, output=4135, reasoning=72 | paths=1, facts=5, evidence=33
+[4/39] START semantic_pack_002_part_02 | attempt=1/2, input=53,305, reasoning=low, max_output=32,000
+  ... semantic_pack_002_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_002_part_02 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_002_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_002_part_02 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_002_part_01 attempt 1 still processing (30s elapsed)
+[3/39] DONE semantic_pack_002_part_01 in 32.1s | input=52729, cached=6579, output=4152, reasoning=169 | paths=1, facts=4, evidence=27
+[5/39] START semantic_pack_003_part_01 | attempt=1/2, input=44,087, reasoning=low, max_output=32,000
+  ... semantic_pack_002_part_02 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_003_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_002_part_02 attempt 1 still processing (40s elapsed)
+  ... semantic_pack_003_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_002_part_02 attempt 1 still processing (50s elapsed)
+  ... semantic_pack_003_part_01 attempt 1 still processing (30s elapsed)
+[4/39] DONE semantic_pack_002_part_02 in 54.0s | input=60198, cached=6579, output=4162, reasoning=0 | paths=1, facts=6, evidence=28
+[6/39] START semantic_pack_003_part_02 | attempt=1/2, input=52,805, reasoning=low, max_output=32,000
+  ... semantic_pack_003_part_01 attempt 1 still processing (40s elapsed)
+  ... semantic_pack_003_part_02 attempt 1 still processing (10s elapsed)
+[5/39] DONE semantic_pack_003_part_01 in 46.9s | input=51308, cached=6579, output=6312, reasoning=160 | paths=3, facts=10, evidence=45
+[7/39] START semantic_pack_004_part_01 | attempt=1/2, input=68,801, reasoning=low, max_output=32,000
+  ... semantic_pack_003_part_02 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_004_part_01 attempt 1 still processing (10s elapsed)
+[7/39] DONE semantic_pack_004_part_01 in 10.4s | input=76060, cached=6579, output=1029, reasoning=67 | paths=0, facts=0, evidence=6
+[8/39] START semantic_pack_005_part_01 | attempt=1/2, input=60,523, reasoning=low, max_output=32,000
+  ... semantic_pack_003_part_02 attempt 1 still processing (30s elapsed)
+[6/39] DONE semantic_pack_003_part_02 in 32.5s | input=60064, cached=6579, output=3924, reasoning=118 | paths=1, facts=5, evidence=28
+[9/39] START semantic_pack_006_part_01 | attempt=1/2, input=62,717, reasoning=low, max_output=32,000
+  ... semantic_pack_005_part_01 attempt 1 still processing (10s elapsed)
+[9/39] DONE semantic_pack_006_part_01 in 5.7s | input=69892, cached=6579, output=512, reasoning=60 | paths=0, facts=0, evidence=3
+[10/39] START semantic_pack_006_part_02 | attempt=1/2, input=29,934, reasoning=low, max_output=32,000
+[10/39] DONE semantic_pack_006_part_02 in 5.4s | input=36805, cached=6579, output=511, reasoning=74 | paths=0, facts=0, evidence=2
+[11/39] START semantic_pack_007_part_01 | attempt=1/2, input=68,366, reasoning=low, max_output=32,000
+  ... semantic_pack_005_part_01 attempt 1 still processing (20s elapsed)
+[11/39] DONE semantic_pack_007_part_01 in 5.1s | input=75638, cached=6579, output=471, reasoning=0 | paths=0, facts=0, evidence=3
+[12/39] START semantic_pack_008_part_01 | attempt=1/2, input=53,598, reasoning=low, max_output=32,000
+[8/39] DONE semantic_pack_005_part_01 in 24.2s | input=67909, cached=6579, output=3144, reasoning=113 | paths=1, facts=2, evidence=21
+[13/39] START semantic_pack_008_part_02 | attempt=1/2, input=38,497, reasoning=low, max_output=32,000
+  ... semantic_pack_008_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_008_part_02 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_008_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_008_part_02 attempt 1 still processing (20s elapsed)
+[12/39] DONE semantic_pack_008_part_01 in 25.4s | input=60375, cached=6579, output=3214, reasoning=116 | paths=1, facts=4, evidence=21
+[14/39] START semantic_pack_009_part_01 | attempt=1/2, input=53,019, reasoning=low, max_output=32,000
+  ... semantic_pack_008_part_02 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_009_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_008_part_02 attempt 1 still processing (40s elapsed)
+  ... semantic_pack_009_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_008_part_02 attempt 1 still processing (50s elapsed)
+  ... semantic_pack_009_part_01 attempt 1 still processing (30s elapsed)
+[13/39] DONE semantic_pack_008_part_02 in 59.8s | input=45268, cached=6579, output=8071, reasoning=0 | paths=2, facts=12, evidence=54
+[15/39] START semantic_pack_010_part_01 | attempt=1/2, input=53,802, reasoning=low, max_output=32,000
+  ... semantic_pack_009_part_01 attempt 1 still processing (40s elapsed)
+[14/39] DONE semantic_pack_009_part_01 in 45.3s | input=60247, cached=6579, output=5725, reasoning=78 | paths=2, facts=7, evidence=41
+[16/39] START semantic_pack_011_part_01 | attempt=1/2, input=58,044, reasoning=low, max_output=32,000
+  ... semantic_pack_010_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_011_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_010_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_011_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_010_part_01 attempt 1 still processing (30s elapsed)
+[15/39] DONE semantic_pack_010_part_01 in 32.1s | input=61110, cached=6579, output=3732, reasoning=180 | paths=1, facts=5, evidence=23
+[17/39] START semantic_pack_012_part_01 | attempt=1/2, input=61,175, reasoning=low, max_output=32,000
+  ... semantic_pack_011_part_01 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_012_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_011_part_01 attempt 1 still processing (40s elapsed)
+  ... semantic_pack_012_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_011_part_01 attempt 1 still processing (50s elapsed)
+[16/39] DONE semantic_pack_011_part_01 in 50.1s | input=65037, cached=6579, output=6472, reasoning=65 | paths=2, facts=11, evidence=51
+[18/39] START semantic_pack_013_part_01 | attempt=1/2, input=51,830, reasoning=low, max_output=32,000
+  ... semantic_pack_012_part_01 attempt 1 still processing (30s elapsed)
+[18/39] DONE semantic_pack_013_part_01 in 6.5s | input=58762, cached=6579, output=578, reasoning=0 | paths=0, facts=0, evidence=4
+[19/39] START semantic_pack_014_part_01 | attempt=1/2, input=59,168, reasoning=low, max_output=32,000
+[17/39] DONE semantic_pack_012_part_01 in 39.3s | input=68038, cached=6579, output=5196, reasoning=0 | paths=1, facts=7, evidence=44
+[20/39] START semantic_pack_015_part_01 | attempt=1/2, input=50,309, reasoning=low, max_output=32,000
+  ... semantic_pack_014_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_015_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_014_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_015_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_014_part_01 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_015_part_01 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_014_part_01 attempt 1 still processing (40s elapsed)
+[19/39] DONE semantic_pack_014_part_01 in 42.4s | input=66518, cached=6579, output=5627, reasoning=0 | paths=2, facts=10, evidence=36
+[21/39] START semantic_pack_016_part_01 | attempt=1/2, input=57,623, reasoning=low, max_output=32,000
+[20/39] DONE semantic_pack_015_part_01 in 38.1s | input=57282, cached=6579, output=4329, reasoning=117 | paths=1, facts=5, evidence=29
+[22/39] START semantic_pack_017_part_01 | attempt=1/2, input=63,101, reasoning=low, max_output=32,000
+  ... semantic_pack_016_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_017_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_016_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_017_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_016_part_01 attempt 1 still processing (30s elapsed)
+[22/39] DONE semantic_pack_017_part_01 in 29.2s | input=70273, cached=6579, output=3671, reasoning=80 | paths=1, facts=3, evidence=28
+[23/39] START semantic_pack_018_part_01 | attempt=1/2, input=68,040, reasoning=low, max_output=32,000
+[21/39] DONE semantic_pack_016_part_01 in 31.6s | input=65015, cached=6579, output=3927, reasoning=104 | paths=1, facts=5, evidence=26
+[24/39] START semantic_pack_018_part_02 | attempt=1/2, input=30,245, reasoning=low, max_output=32,000
+  ... semantic_pack_018_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_018_part_02 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_018_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_018_part_02 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_018_part_01 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_018_part_02 attempt 1 still processing (30s elapsed)
+[24/39] DONE semantic_pack_018_part_02 in 34.2s | input=37151, cached=6579, output=4195, reasoning=114 | paths=1, facts=5, evidence=28
+[25/39] START semantic_pack_019_part_01 | attempt=1/2, input=40,195, reasoning=low, max_output=32,000
+[23/39] DONE semantic_pack_018_part_01 in 35.5s | input=75401, cached=6579, output=4442, reasoning=206 | paths=1, facts=5, evidence=29
+[26/39] START semantic_pack_019_part_02 | attempt=1/2, input=65,653, reasoning=low, max_output=32,000
+  ... semantic_pack_019_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_019_part_02 attempt 1 still processing (10s elapsed)
+[26/39] DONE semantic_pack_019_part_02 in 12.3s | input=72921, cached=6579, output=1242, reasoning=107 | paths=0, facts=0, evidence=9
+[27/39] START semantic_pack_020_part_01 | attempt=1/2, input=44,009, reasoning=low, max_output=32,000
+  ... semantic_pack_019_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_020_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_019_part_01 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_020_part_01 attempt 1 still processing (20s elapsed)
+[25/39] DONE semantic_pack_019_part_01 in 39.2s | input=47038, cached=6579, output=5031, reasoning=132 | paths=1, facts=4, evidence=32
+[28/39] START semantic_pack_020_part_02 | attempt=1/2, input=39,812, reasoning=low, max_output=32,000
+  ... semantic_pack_020_part_01 attempt 1 still processing (30s elapsed)
+[27/39] DONE semantic_pack_020_part_01 in 34.6s | input=51160, cached=6579, output=4355, reasoning=149 | paths=2, facts=7, evidence=29
+[29/39] START semantic_pack_020_part_03 | attempt=1/2, input=44,233, reasoning=low, max_output=32,000
+  ... semantic_pack_020_part_02 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_020_part_03 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_020_part_02 attempt 1 still processing (20s elapsed)
+[28/39] DONE semantic_pack_020_part_02 in 27.8s | input=46984, cached=6579, output=3572, reasoning=84 | paths=1, facts=4, evidence=24
+[30/39] START semantic_pack_021_part_01 | attempt=1/2, input=68,785, reasoning=low, max_output=32,000
+  ... semantic_pack_020_part_03 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_021_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_020_part_03 attempt 1 still processing (30s elapsed)
+[30/39] DONE semantic_pack_021_part_01 in 11.2s | input=76241, cached=6579, output=1129, reasoning=102 | paths=0, facts=0, evidence=8
+[31/39] START semantic_pack_021_part_02 | attempt=1/2, input=35,053, reasoning=low, max_output=32,000
+  ... semantic_pack_020_part_03 attempt 1 still processing (40s elapsed)
+  ... semantic_pack_021_part_02 attempt 1 still processing (10s elapsed)
+[29/39] DONE semantic_pack_020_part_03 in 42.9s | input=51291, cached=6579, output=6061, reasoning=113 | paths=2, facts=8, evidence=43
+[32/39] START semantic_pack_022_part_01 | attempt=1/2, input=40,819, reasoning=low, max_output=32,000
+  ... semantic_pack_021_part_02 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_022_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_021_part_02 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_022_part_01 attempt 1 still processing (20s elapsed)
+[31/39] DONE semantic_pack_021_part_02 in 36.0s | input=42144, cached=6579, output=5029, reasoning=0 | paths=2, facts=7, evidence=36
+[33/39] START semantic_pack_022_part_02 | attempt=1/2, input=41,404, reasoning=low, max_output=32,000
+[32/39] DONE semantic_pack_022_part_01 in 26.9s | input=47734, cached=6579, output=3547, reasoning=86 | paths=1, facts=6, evidence=25
+[34/39] START semantic_pack_022_part_03 | attempt=1/2, input=39,503, reasoning=low, max_output=32,000
+  ... semantic_pack_022_part_02 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_022_part_03 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_022_part_02 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_022_part_03 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_022_part_02 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_022_part_03 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_022_part_02 attempt 1 still processing (40s elapsed)
+[33/39] DONE semantic_pack_022_part_02 in 41.2s | input=48334, cached=6579, output=5905, reasoning=89 | paths=2, facts=11, evidence=41
+[35/39] START semantic_pack_023_part_01 | attempt=1/2, input=40,200, reasoning=low, max_output=32,000
+  ... semantic_pack_022_part_03 attempt 1 still processing (40s elapsed)
+[34/39] DONE semantic_pack_022_part_03 in 42.0s | input=46504, cached=6579, output=5921, reasoning=139 | paths=2, facts=7, evidence=41
+[36/39] START semantic_pack_023_part_02 | attempt=1/2, input=66,863, reasoning=low, max_output=32,000
+  ... semantic_pack_023_part_01 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_023_part_02 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_023_part_01 attempt 1 still processing (20s elapsed)
+[35/39] DONE semantic_pack_023_part_01 in 20.9s | input=47228, cached=6579, output=2810, reasoning=105 | paths=1, facts=4, evidence=20
+[37/39] START semantic_pack_024_part_01 | attempt=1/2, input=69,343, reasoning=low, max_output=32,000
+  ... semantic_pack_023_part_02 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_024_part_01 attempt 1 still processing (10s elapsed)
+[36/39] DONE semantic_pack_023_part_02 in 29.8s | input=74017, cached=6579, output=4063, reasoning=118 | paths=1, facts=4, evidence=31
+[38/39] START semantic_pack_024_part_02 | attempt=1/2, input=40,856, reasoning=low, max_output=32,000
+  ... semantic_pack_024_part_01 attempt 1 still processing (20s elapsed)
+  ... semantic_pack_024_part_02 attempt 1 still processing (10s elapsed)
+  ... semantic_pack_024_part_01 attempt 1 still processing (30s elapsed)
+  ... semantic_pack_024_part_02 attempt 1 still processing (20s elapsed)
+[38/39] DONE semantic_pack_024_part_02 in 24.6s | input=47760, cached=6579, output=3262, reasoning=169 | paths=1, facts=2, evidence=21
+[39/39] START semantic_pack_025_part_01 | attempt=1/2, input=14,531, reasoning=low, max_output=32,000
+  ... semantic_pack_024_part_01 attempt 1 still processing (40s elapsed)
+[37/39] DONE semantic_pack_024_part_01 in 41.5s | input=76796, cached=6579, output=5539, reasoning=135 | paths=2, facts=8, evidence=37
+[39/39] DONE semantic_pack_025_part_01 in 5.6s | input=21268, cached=6579, output=599, reasoning=84 | paths=0, facts=0, evidence=3
+
+[SHIPREADYV2 PASS 1 FULL REPOSITORY RUN COMPLETE]
+Completion: COMPLETE
+Successful: 39/39
+Results:    /tmp/uvc-f79w2eu5/b/run/shipreadyv2_pass1_full_results.jsonl
+Trace:      /tmp/uvc-f79w2eu5/b/run/shipreadyv2_pass1_full_trace.jsonl
+Artifacts:  /tmp/uvc-f79w2eu5/b/run/shipreadyv2_pass1_full_artifacts
+[SHIPREADYV2 BUSINESS PATH COMPILER]
+Report folder: /tmp/uvc-f79w2eu5/b/run
+Pass 1 results: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_pass1_full_results.jsonl
+Prepared input: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_pass1_llm_inputs.jsonl
+Resolved graph: /tmp/uvc-f79w2eu5/b/run/shipreadyv2_resolved_graph.json
+Semantic packs: optional integrity source; not required at runtime
+
+[COMPILATION COMPLETE]
+Scan: COMPLETE (39/39 requests)
+Normalized paths: 43
+Components: 30
+Output: /tmp/uvc-f79w2eu5/b/run/normalized_business_paths.json
+Workflow context: /tmp/uvc-f79w2eu5/b/run/business_workflow_context.html
+Coverage: /tmp/uvc-f79w2eu5/b/run/business_path_coverage.json
+Audit: /tmp/uvc-f79w2eu5/b/run/business_path_compiler_audit.jsonl
